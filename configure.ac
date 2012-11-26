@@ -6,6 +6,8 @@ m4_define([wayland_micro_version], [1])
 m4_define([wayland_version],
           [wayland_major_version.wayland_minor_version.wayland_micro_version])
 
+m4_define([wayland_client_api], [1])
+
 AC_INIT([wayland],
         [wayland_version],
         [https://bugs.freedesktop.org/enter_bug.cgi?product=wayland],
@@ -16,6 +18,8 @@ AC_SUBST([WAYLAND_VERSION_MAJOR], [wayland_major_version])
 AC_SUBST([WAYLAND_VERSION_MINOR], [wayland_minor_version])
 AC_SUBST([WAYLAND_VERSION_MICRO], [wayland_micro_version])
 AC_SUBST([WAYLAND_VERSION], [wayland_version])
+
+AC_SUBST([WAYLAND_CLIENT_API_VERSION], [wayland_client_api])
 
 AC_CONFIG_HEADERS([config.h])
 AC_CONFIG_MACRO_DIR([m4])
